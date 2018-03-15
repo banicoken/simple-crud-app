@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>PAManager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,15 @@
   </head>
 
   <body>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 offset-sm-8 text-center">
+        <%= link_to "Home",  root_path, class: "btn btn-info" %>
+        <%= link_to "New Reminder",  new_post_path, class: "btn btn-info" %>
+      </div>
+    </div>
+    <br>
+    <br>
     <%= yield %>
   </body>
 </html>
