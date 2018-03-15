@@ -1,0 +1,17 @@
+<h1>Jenns PA Manager</h1>
+<h1>Create a new reminder</h1>
+<h3><%= link_to "Create Reminder", new_post_path %></h3>
+<div>
+  <% @posts.each do |post| %>
+    <h1>Name</h1>
+    <p><%= post.title %></p>
+    <br>
+    <h1>Description</h1>
+    <p><%= post.content %></p>
+
+    <br>
+    <%= link_to "Edit", edit_post_path(post) %>
+    <%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
+
+</div>
