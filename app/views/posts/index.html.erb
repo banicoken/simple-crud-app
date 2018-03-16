@@ -24,7 +24,7 @@
             <h1 class="card-title pricing-card-title">Description</h1>
             <ul class="list-unstyled mt-3 mb-4">
 
-              <li><p><%= post.content %></p></li>
+              <li><p><%= post.content.gsub(/\n/, '<br>').html_safe %></p></li>
             </ul>
             <br>
             <%= link_to "Edit", edit_post_path(post), class: "btn btn-success" %>
